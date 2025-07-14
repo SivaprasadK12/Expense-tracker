@@ -19,6 +19,8 @@ app.use(
     })
 );
 
+app.options("*", cors());
+
 const authRoutes = require("./routes/authroutes");
 const incomeRoutes = require("./routes/incomeroutes");
 const expenseRoutes = require("./routes/expenseroutes")
