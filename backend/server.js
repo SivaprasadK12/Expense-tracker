@@ -21,10 +21,10 @@ app.use(
 
 app.options("*", cors());
 
-const authRoutes = require("./routes/authroutes");
-const incomeRoutes = require("./routes/incomeroutes");
-const expenseRoutes = require("./routes/expenseroutes")
-const dashboardRoutes = require("./routes/dashboardroutes")
+const authRoutes = require("./routes/authRoutes");
+const incomeRoutes = require("./routes/incomeRoutes");
+const expenseRoutes = require("./routes/expenseRoutes")
+const dashboardRoutes = require("./routes/dashboardRoutes")
 
 connectDB();
 
