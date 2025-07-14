@@ -9,7 +9,7 @@ app.use(express.json());
 
 app.use(
     cors({
-    origin: process.env.CLIENT_URL,
+    origin: 'https://expense-tracker-backend-v7a7.onrender.com',
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
