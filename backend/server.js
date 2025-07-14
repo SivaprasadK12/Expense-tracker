@@ -9,7 +9,7 @@ app.use(express.json());
 
 const allowedOrigins = [
   "http://localhost:3000",
-  "https://your-vercel-app.vercel.app"
+  "https://expense-tracker-mauve-mu.vercel.app"
 ];
 
 app.use(cors({
