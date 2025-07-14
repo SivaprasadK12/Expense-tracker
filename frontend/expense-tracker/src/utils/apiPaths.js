@@ -1,4 +1,4 @@
-export const BASE_URL = "https://expense-tracker-backend-0we4.onrender.com";
+export const BASE_URL = `${import.meta.env.VITE_API_URL}/api/v1`;
 
 export const API_PATHS = {
     AUTH: {
