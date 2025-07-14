@@ -4,11 +4,8 @@ const cors = require("cors")
 const path = require("path")
 const connectDB = require("./config/db")
 
-
 const app = express()
 app.use(express.json());
-
-
 
 app.use(
     cors({
@@ -18,8 +15,6 @@ app.use(
     allowedHeaders: ["Content-Type", "Authorization"],
     })
 );
-
-app.options("*", cors());
 
 const authRoutes = require("./routes/authRoutes");
 const incomeRoutes = require("./routes/incomeRoutes");
