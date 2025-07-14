@@ -19,7 +19,6 @@ dist-ssr
 *.local
 *.cache/
 .vscode/
-dist/
  build/
 .idea/
 .DS_Store
