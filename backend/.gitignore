@@ -1,0 +1,22 @@
+# Ignore logs
+logs
+*.log
+
+# Ignore system files
+.DS_Store
+
+# Ignore local config folders
+.vscode/
+.idea/
+
+# Ignore environment files
+.env
+
+# Ignore build folders if any
+build/
+dist/
+node_modules/
+backend/*
+.xlsx/
+backend/
+uploads/*
