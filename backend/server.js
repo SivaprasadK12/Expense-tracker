@@ -9,6 +9,7 @@ app.use(express.json());
 
 
 const allowedOrigins = [
+   "https://expense-tracker-backend-0we4.onrender.com",
   "https://expense-tracker-mauve-mu.vercel.app"
 ];
 
