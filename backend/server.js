@@ -10,7 +10,9 @@ app.use(express.json());
 
 const allowedOrigins = [
   "http://localhost:3000",
-  "https://expense-tracker-mauve-mu.vercel.app"
+  "https://expense-tracker-mauve-mu.vercel.app",
+  'https://expense-tracker-git-main-sivaprasad-ks-projects.vercel.app',
+  'https://expense-tracker-4uykibsoj-sivaprasad-ks-projects.vercel.app',
 ];
 
 app.use(cors({
