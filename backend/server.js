@@ -5,37 +5,30 @@ const path = require("path")
 const connectDB = require("./config/db")
 const app = express()
 
-app.use(express.json());
 
 
 const allowedOrigins = [
-   "https://expense-tracker-backend-0we4.onrender.com",
-  "https://expense-tracker-mauve-mu.vercel.app"
+  //  "https://expense-tracker-backend-0we4.onrender.com",
 ];
 
 app.use(cors({
-  origin: function (origin, callback) {
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS"));
-    }
-  },
-    credentials: true,
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    allowedHeaders: ["Content-Type", "Authorization"],
-    })
+  origin: "https://expense-tracker-mauve-mu.vercel.app",
+  credentials: true,
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+})
 );
 
-app.use((req, res, next) => {
-  res.header(
-    "Access-Control-Allow-Origin",
-    "https://expense-tracker-mauve-mu.vercel.app"
-  );
-  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
-  res.header("Access-Control-Allow-Headers", "Content-Type");
-  next();
-});
+app.use(express.json());
+// app.use((req, res, next) => {
+//   res.header(
+//     "Access-Control-Allow-Origin",
+//     "https://expense-tracker-mauve-mu.vercel.app"
+//   );
+//   res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+//   res.header("Access-Control-Allow-Headers", "Content-Type");
+//   next();
+// });
 
 const authRoutes = require("./routes/authRoutes");
 const incomeRoutes = require("./routes/incomeRoutes");
